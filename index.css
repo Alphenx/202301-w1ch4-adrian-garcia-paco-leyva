@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
-* {
-  border: 1px solid red;
-}
-
 body {
   font-family: "Nunito", sans-serif;
   height: 100%;
 }
 
+.title-section {
+  margin-bottom: 1rem;
+}
+
 .title-container {
-  padding: 1.9rem;
   height: 8rem;
   width: 90%;
   margin: 0 auto;
+  padding-top: 2.5em;
 }
 
 .title-container__activities {
@@ -21,14 +21,19 @@ body {
   border-color: 0.1rem solid;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .title-container__type-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5em;
 }
 
 .title-container__type-activity > h1 {
-  padding: 0.7rem 0;
+  font-size: 3rem;
+
   display: inline-block;
 }
 
@@ -40,10 +45,10 @@ body {
 
   text-align: center;
   justify-content: center;
-  width: 4rem;
+  width: 5rem;
   height: 2rem;
-  font-size: 0.7rem;
-  margin: 0 auto;
+  font-size: 1rem;
+
   padding: 0.5rem;
   justify-items: center;
 }
@@ -59,21 +64,28 @@ body {
   .title-container {
     text-align: center;
   }
-}
 
-@media (max-width: 376px) {
-  .title-container {
-    text-align: center;
+  .title-container > p {
+    font-size: 0.5em;
+  }
+
+  .title-container__type-activity > h1 {
+    font-size: 2.3em;
+    padding: 0.5rem 0;
+  }
+
+  .title-container__type-activity > a {
+    display: block;
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .title-container__type-activity {
     display: flex;
     justify-content: space-between;
     margin: 0;
   }
-}
+} */
 
 .pictures-section {
   display: flex;
@@ -132,6 +144,12 @@ body {
 @media (max-width: 377px) {
   .pictures-section__pictures-container {
     flex-direction: column;
+  }
+
+  .title-container__type-activity {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2em;
   }
 
   .pictures-container__animal-card img {
