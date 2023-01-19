@@ -3,3 +3,74 @@
 body {
   font-family: "Nunito", sans-serif;
 }
+
+.pictures-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pictures-section__pictures-container {
+  gap: 30px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.pictures-container__animal-card {
+  position: relative;
+  width: 80%;
+}
+
+.pictures-container__animal-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+}
+
+.animal-card__text-container {
+  position: absolute;
+
+  font-size: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  opacity: 0;
+  text-align: center;
+}
+
+.animal-card__text-container h3 {
+  font-size: 2em;
+}
+
+.pictures-container__animal-card img:hover {
+  transition: 300ms;
+  filter: brightness(75%);
+}
+
+.pictures-container__animal-card:hover > .animal-card__text-container {
+  opacity: 1;
+  transition: 200ms;
+}
+
+.animal-card__text-container ~ p {
+  text-align: center;
+}
+
+@media (max-width: 377px) {
+  .pictures-section__pictures-container {
+    flex-direction: column;
+  }
+
+  .pictures-container__animal-card img {
+    filter: brightness(75%);
+  }
+
+  .animal-card__text-container {
+    position: absolute;
+    font-size: 0.7em;
+    top: 80%;
+    opacity: 1;
+  }
+}
