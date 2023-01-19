@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
-* {
-  border: 1px solid red;
-}
-
 body {
   font-family: "Nunito", sans-serif;
   height: 100%;
